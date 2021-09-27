@@ -14,7 +14,7 @@ Than just run `npm run dev` to start.
 
 ## Testing API
 
-URL: http://localhost:3000/products
+    URL: http://localhost:3000/products
     Method allowed: GET
     Response:
     {

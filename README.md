@@ -1,6 +1,7 @@
 # About the application
 
-This is a simple API using [Nodemon](https://www.npmjs.com/package/nodemon), there is an entity (Product) and it has [Redis](https://redis.io/) cache implemented in GET method.
+This is a simple API using [Nodemon](https://www.npmjs.com/package/nodemon) and the database is [MongoDB](https://www.mongodb.com/),
+there is an entity (Product) and it has [Redis](https://redis.io/) cache implemented in GET method.
 
 # How to start the application
 

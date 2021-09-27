@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+
+  mongo:
+    image: mongo
+    container_name: db-nodeapi
+    environment:
+      - MONGODB_DATABASE=nodeapi
+    ports:
+      - "27017:27017"
+    networks:
+      - mongo-compose-network
+    restart: unless-stopped
+
+  redis:
+    image: redis:latest
+    container_name: redis-cache
+    ports:
+      - 6379:6379
+    command: ["redis-server", "--appendonly", "yes"]
+    restart: unless-stopped
+
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    container_name: redis-commander
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+      - HTTP_USER=root
+      - HTTP_PASSWORD=123456
+    ports:
+      - 8081:8081
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+networks: 
+    mongo-compose-network:
+      driver: bridge

@@ -1,7 +1,8 @@
 const express = require('express');
 const routes = express.Router();
+const queue = require('../rabbitmq')
 
-const ProductController = require('./controllers/ProductController');
+const ProductController = require('../../controllers/ProductController');
 
 routes.get('/products', ProductController.list);
 routes.get('/products/:id', ProductController.getById);

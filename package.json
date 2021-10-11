@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,8 @@
   "keywords": [
     "redis",
     "nodemon",
-    "cache"
+    "cache",
+    "mongo"
   ],
   "author": "Marlon Ribeiro Pedroso",
   "license": "ISC",
@@ -29,7 +31,7 @@
     "express": "^4.17.1",
     "https": "^1.0.0",
     "mongoose": "^6.0.8",
-    "mongoose-paginate": "^5.0.3",
+    "mongoose-paginate-v2": "^1.4.2",
     "morgan": "^1.10.0",
     "os": "^0.1.2",
     "pem": "^1.14.4",
@@ -37,7 +39,8 @@
     "require-dir": "^1.2.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.2"
+    "nodemon": "^1.19.2",
+    "prettier": "2.4.1"
   },
   "engines": {
     "node": ">=15.0.0"

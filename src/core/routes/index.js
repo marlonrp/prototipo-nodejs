@@ -1,13 +1,13 @@
-const express = require('express');
+const express = require("express");
 const routes = express.Router();
-const queue = require('../rabbitmq')
+const queue = require("../rabbitmq");
 
-const ProductController = require('../../controllers/ProductController');
+const PersonController = require("../../controllers/PersonController");
 
-routes.get('/products', ProductController.list);
-routes.get('/products/:id', ProductController.getById);
-routes.post('/products', ProductController.save);
-routes.put('/products/:id', ProductController.edit);
-routes.delete('/products/:id', ProductController.delete);
+routes.get("/person", PersonController.list);
+routes.get("/person/:id", PersonController.getById);
+routes.post("/person", PersonController.save);
+routes.put("/person/:id", PersonController.edit);
+routes.delete("/person/:id", PersonController.delete);
 
 module.exports = routes;
